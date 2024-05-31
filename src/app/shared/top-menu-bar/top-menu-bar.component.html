@@ -1,9 +1,9 @@
 <div
-    class="border-b border-gray-700 flex items-center bg-gray-800 w-full py-2 md:px-5 px-2 md:gap-x-10 gap-x-2 h-[73px]">
+    class="border-b border-gray-700 flex justify-between items-center bg-gray-800 w-full py-2 md:px-5 px-2 md:gap-x-10 gap-x-2 md:h-[73px] h-[56px]">
 
 
     <!--*********** Botón en xs ***********-->
-    <button class="md:hidden block rounded focus:text-teal-500 focus:bg-gray-700 w-10 h-8 ">
+    <button class="md:hidden block rounded focus:text-teal-500 focus:bg-gray-700 w-7 h-7 ">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -12,16 +12,16 @@
 
 
     <!--*********** Logo ***********-->
-    <img class="rounded h-14 w-16 "
+    <div class="md:hidden w-7 block mr-auto"></div> <!-- Espaciador -->
+    <img class="rounded md:h-14 md:w-16 h-10 w-11 md:mx-0 mx-auto"
         src="https://scontent.fcue12-1.fna.fbcdn.net/v/t1.6435-9/78430089_2429967580602442_4037518104350162944_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG4KahIFj20bszloqilRRWa92bXzoD7ctr3ZtfOgPty2qzctEd-uIgcg7ofLq-SWUCmi0vDEtJTSQyKRqrNVVY1&_nc_ohc=JcxmkaFUw4QQ7kNvgGdYpq1&_nc_ht=scontent.fcue12-1.fna&oh=00_AYAMV7EkjhnxPtjs86hfPRwhLLPUYndKkJorvEBhazH0Zw&oe=667F9950"
         alt="">
 
-
     <!--*********** Search ***********-->
     <div
-        class="border border-gray-400 flex md:flex-grow justify-end rounded-md focus-within:ring-2 ring-teal-500 mr-10">
+        class="md:border border-gray-400 flex md:flex-grow justify-end rounded-md focus-within:ring-2 ring-teal-500 md:mr-10 md:ml-0 ml-auto">
         <input type="text"
-            class="w-full rounded-tl-md rounded-bl-md px-2 py-3 text-sm  focus:outline-none hidden md:block"
+            class="w-full rounded-tl-md rounded-bl-md px-2 py-3 text-sm  focus:outline-none hidden md:block "
             placeholder="Search" />
         <button class="rounded-tr-md rounded-br-md px-2 py-3">
             <svg class="w-4 h-4 fill-current" fill="currentColor" viewBox="0 0 20 20"
@@ -65,7 +65,7 @@
 
 
     <!--*********** icon Favorito ***********-->
-    <button class="rounded focus:text-teal-500 focus:bg-gray-700 md:w-7 md:h-7 md:p-0.5 w-6 h-6 ml-auto">
+    <button class="rounded focus:text-teal-500 focus:bg-gray-700 md:w-7 md:h-7 md:p-0.5 w-6 h-6">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -77,4 +77,10 @@
 
 <div class="p-2">
     Empezamos
+</div>
+
+<div class="flex justify-between">
+    <p>EL1</p>
+    <p>EL2</p>
+    <p>EL3</p>
 </div>
