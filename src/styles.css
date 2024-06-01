@@ -8,19 +8,16 @@
 }
 
 @layer components  {
-    .bg-i { @apply 
-        bg-gray-200 dark:bg-gray-800 bg-opacity-60;
-    }
-    .bg-o { @apply 
-        bg-gray-100 dark:bg-gray-600;
-    }
-    .text-o {
-        @apply text-gray-500 dark:text-gray-400;
-      }
-    .text-i {
-        @apply text-gray-700 dark:text-gray-200;
-      }
-    .text-teal-i {
-        @apply text-teal-500 dark:text-teal-400;
-      }
+    .bg-i {@apply bg-gray-200 bg-opacity-60 dark:bg-gray-800;}
+    .bg-o {@apply bg-gray-100 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-25;}
+    .bg-s {@apply bg-green-400 dark:bg-green-300;}
+
+    .text-m {@apply text-gray-700 dark:text-gray-200;}
+    .text-o {@apply text-gray-500 dark:text-gray-400;}
+    .text-s {@apply text-teal-500 dark:text-teal-400;}
+
+    .bor-b-m {@apply border-gray-700 dark:border-gray-200 border-b;}
+    .bor-s   {@apply border-teal-500 dark:border-teal-400 border-b-2;}
+    
+    .c-btn1 {@apply text-white bg-green-500 dark:text-gray-900 dark:bg-green-400 rounded py-1 px-1.5 font-semibold hover:bg-s}
   }

@@ -1,25 +1,28 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PageHomeComponent } from './dashboard/page-home/page-home.component';
-import { PageServicesComponent } from './dashboard/page-services/page-services.component';
+import PageHomeComponent from './dashboard/page-home/page-home.component';
+import PageServicesComponent from './dashboard/page-services/page-services.component';
 
 export const routes: Routes = [
     {
-        path: '',
-        component: DashboardComponent,
-        children: [
-            {
-                path: 'page-home',
-                title: 'Inicio',
-                component: PageHomeComponent
-            },
-            {
-                path: 'page-services',
-                title: 'Servicios',
-                component: PageServicesComponent
-            },
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-        ]
+        path: 'page-fav',
+        title: 'Favoritos',
+        loadComponent: () => import('./dashboard/page-fav/page-fav.component'),
     },
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    {
+        path: 'page-home',
+        title: 'Inicio',
+        loadComponent: () => import('./dashboard/page-home/page-home.component'),
+    },
+    {
+        path: 'page-nosotros',
+        title: 'Nosotros',
+        loadComponent: () => import('./dashboard/page-nosotros/page-nosotros.component'),
+    },
+    {
+        path: 'page-services',
+        title: 'Servicios',
+        loadComponent: () => import('./dashboard/page-services/page-services.component'),
+    },
+    { path: '', redirectTo: '/page-home', pathMatch: 'full' },
+    { path: '**', redirectTo: '/page-home', pathMatch: 'full' },
 ];

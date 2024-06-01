@@ -38,36 +38,45 @@
     <!-- Menú en md -->
     <div class="hidden md:inline-flex gap-x-2" id="navigation">
 
-        <a href="" class="text-o hover:text-i hover:border-b hover:border-gray-700">
-            <span class="flex items-end gap-x-0.5 px-1 text-sm">
+        <a routerLink="/page-home" routerLinkActive="bg-gradient-to-r text-s bor-s"
+            class="text-o hover:text-m hover:bor-b-m gap-x-0.5 px-1 text-sm font-bold">
+            <div class="flex items-end px-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg> Home</span>
+                </svg>
+                <span>Home</span>
+            </div>
         </a>
-
-        <a href="" class="">
-            <span class="flex items-end gap-x-0.5 px-1 pb-0.5 border-b-2 border-teal-500 text-teal-i font-bold text-sm">
+        <a routerLink="/page-services" routerLinkActive="text-s bor-s"
+            class="text-o hover:text-m hover:bor-b-m gap-x-0.5 px-1 text-sm font-bold">
+            <div class="flex items-end px-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg> Home</span>
+                </svg>
+                <span>Servicios</span>
+            </div>
         </a>
-        <a href="" class="text-o hover:text-i hover:border-b hover:border-gray-700">
-            <span class="flex items-end gap-x-0.5 px-1 text-sm">
+        <a routerLink="/page-nosotros" routerLinkActive="text-s bor-s"
+            class="text-o hover:text-m hover:bor-b-m gap-x-0.5 px-1 text-sm font-bold">
+            <div class="flex items-end px-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg> Home</span>
+                </svg>
+                <span>Nosotros</span>
+            </div>
         </a>
     </div>
 
 
     <!--*********** icon Favorito ***********-->
-    <button class="text-o hover:text-i md:w-7 md:h-7 md:p-0.5 w-6 h-6" (click)="cambiarAncho()">
+    <button routerLink="/page-fav" routerLinkActive="text-s" class="text-o hover:text-m md:w-7 md:h-7 md:p-0.5 w-6 h-6"
+        (click)="cambiarAncho()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" [attr.stroke-width]="anchoDeTrazo"
             stroke="currentColor">
             <path id="path" stroke-linecap="round" stroke-linejoin="round"
