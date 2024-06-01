@@ -38,8 +38,8 @@
     <!-- Menú en md -->
     <div class="hidden md:inline-flex gap-x-2 h-7" id="navigation">
 
-        <a routerLink="/page-home" routerLinkActive="bg-gradient-to-r text-s bor-s"
-            class="text-o hover:text-m hover:bor-b-m gap-x-0.5 px-1 text-sm font-bold">
+        <a routerLink="/page-home" routerLinkActive="text-s bor-s" class="group text-o gap-x-0.5 text-sm font-bold"
+            [ngClass]="{'hover:text-m hover:bor-b-m': !isActive('/page-home')}">
             <div class="flex items-end px-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">
@@ -49,8 +49,9 @@
                 <span>Inicio</span>
             </div>
         </a>
-        <a routerLink="/page-services" routerLinkActive="text-s bor-s"
-            class="text-o hover:text-m hover:bor-b-m gap-x-0.5 px-1 text-sm font-bold">
+
+        <a routerLink="/page-services" routerLinkActive="text-s bor-s" class="group text-o gap-x-0.5 text-sm font-bold"
+            [ngClass]="{'hover:text-m hover:bor-b-m': !isActive('/page-services')}">
             <div class="flex items-end px-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">
@@ -60,8 +61,9 @@
                 <span>Servicios</span>
             </div>
         </a>
-        <a routerLink="/page-nosotros" routerLinkActive="text-s bor-s"
-            class="text-o hover:text-m hover:bor-b-m gap-x-0.5 px-1 text-sm font-bold">
+
+        <a routerLink="/page-nosotros" routerLinkActive="text-s bor-s" class="group text-o gap-x-0.5 text-sm font-bold"
+            [ngClass]="{'hover:text-m hover:bor-b-m': !isActive('/page-nosotros')}">
             <div class="flex items-end px-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-5">
@@ -71,12 +73,13 @@
                 <span>Nosotros</span>
             </div>
         </a>
+
     </div>
 
 
     <!--*********** icon Favorito ***********-->
-    <button routerLink="/page-fav" routerLinkActive="text-s" class="text-o hover:text-m md:w-7 md:h-7 md:p-0.5 w-6 h-6"
-        (click)="cambiarAncho()">
+    <button routerLink="/page-fav" routerLinkActive="text-s" class="text-o md:w-7 md:h-7 md:p-0.5 w-6 h-6"
+        [ngClass]="{'hover:text-m': !isActive('/page-fav')}" (click)="cambiarAncho()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" [attr.stroke-width]="anchoDeTrazo"
             stroke="currentColor">
             <path id="path" stroke-linecap="round" stroke-linejoin="round"

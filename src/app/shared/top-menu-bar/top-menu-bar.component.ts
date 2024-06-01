@@ -1,10 +1,11 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top-menu-bar',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, NgClass],
   templateUrl: './top-menu-bar.component.html',
   styleUrl: './top-menu-bar.component.css'
 })
@@ -14,6 +15,12 @@ export class TopMenuBarComponent {
 
   cambiarAncho() {
     this.anchoDeTrazo = 2.5; // Cambiar el valor del ancho del trazo
+  }
+
+  constructor(private router: Router) { }
+
+  isActive(route: string): boolean {
+    return this.router.isActive(route, true);
   }
 
 }
