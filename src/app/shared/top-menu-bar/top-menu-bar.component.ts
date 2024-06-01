@@ -5,19 +5,14 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './top-menu-bar.component.html',
-  styles: ``
+  styleUrl: './top-menu-bar.component.css'
 })
 export class TopMenuBarComponent {
 
-  // $(document).ready(function() {
-  //   $(".nav-toggler").each(function (_, navToggler) {
-  //     var target = $(navToggler).data("target");
-  //     $(navToggler).on("click", function () {
-  //       $(target).animate({
-  //         height: "toggle"
-  //       });
-  //     });
-  //   });
-  // });
+  anchoDeTrazo: number = 1.5; // Valor inicial del ancho del trazo
+
+  cambiarAncho() {
+    this.anchoDeTrazo = this.anchoDeTrazo === 1.5 ? 2.5 : 1.5; // Cambiar el valor del ancho del trazo
+  }
 
 }
