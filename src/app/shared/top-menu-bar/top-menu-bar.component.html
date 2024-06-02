@@ -36,46 +36,18 @@
     </div>
 
 
-    <!--*********** Menú ***********-->
+    <!--*********** Menú md ***********-->
     <!-- Menú en md -->
     <div class="hidden md:inline-flex gap-x-2 h-7" id="navigation">
 
-        <a routerLink="/page-home" routerLinkActive="text-s bor-s" class="group text-o gap-x-0.5 text-sm font-bold"
-            [ngClass]="{'hover:text-m hover:bor-b-m': !isActive('/page-home')}">
+        @for (item of items; track $index) {
+        <a [routerLink]="item.route" routerLinkActive="text-s bor-s" class="text-o gap-x-0.5 text-sm font-semibold"
+            [ngClass]="{'hover:text-m hover:bor-b-m': !isActive(item.route)}">
             <div class="flex items-end px-1">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-                <span>Inicio</span>
+                <i class="{{ item.icon }} mr-1 pb-0.5"></i>
+                <span>{{item.title}} </span>
             </div>
-        </a>
-
-        <a routerLink="/page-services" routerLinkActive="text-s bor-s" class="group text-o gap-x-0.5 text-sm font-bold"
-            [ngClass]="{'hover:text-m hover:bor-b-m': !isActive('/page-services')}">
-            <div class="flex items-end px-1">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-                <span>Servicios</span>
-            </div>
-        </a>
-
-        <a routerLink="/page-nosotros" routerLinkActive="text-s bor-s" class="group text-o gap-x-0.5 text-sm font-bold"
-            [ngClass]="{'hover:text-m hover:bor-b-m': !isActive('/page-nosotros')}">
-            <div class="flex items-end px-1">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-5">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-                <span>Nosotros</span>
-            </div>
-        </a>
-
+        </a>}
     </div>
 
 
