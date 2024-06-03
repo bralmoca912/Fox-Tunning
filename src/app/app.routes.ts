@@ -15,24 +15,23 @@ export const routes: Routes = [
     },
     {
         path: 'services',
-        loadComponent: () => import('./dashboard/page-services/page-services.component'), children: [
-            {
-                path: 'all-services',
-                loadComponent: () => import('./dashboard/page-services/all-services/all-services.component')
-            },
-            {
-                path: 'impresion-vinil',
-                loadComponent: () => import('./dashboard/page-services/impresion-vinil/impresion-vinil.component')
-            },
-            {
-                path: 'decor-vehiculos',
-                loadComponent: () => import('./dashboard/page-services/decor-vehiculos/decor-vehiculos.component')
-            },
-            {
-                path: 'corte-laser',
-                loadComponent: () => import('./dashboard/page-services/corte-laser/corte-laser.component')
-            },
-        ]
+        loadComponent: () => import('./dashboard/page-services/page-services.component'),
+    },
+    {
+        path: 'all-services',
+        loadComponent: () => import('./dashboard/page-services/all-services/all-services.component')
+    },
+    {
+        path: 'impresion-vinil',
+        loadComponent: () => import('./dashboard/page-services/impresion-vinil/impresion-vinil.component')
+    },
+    {
+        path: 'decor-vehiculos',
+        loadComponent: () => import('./dashboard/page-services/decor-vehiculos/decor-vehiculos.component')
+    },
+    {
+        path: 'corte-laser',
+        loadComponent: () => import('./dashboard/page-services/corte-laser/corte-laser.component')
     },
     { path: '', redirectTo: '/page-home', pathMatch: 'full' },
     { path: '**', redirectTo: '/page-home', pathMatch: 'full' },
