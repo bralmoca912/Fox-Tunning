@@ -68,17 +68,17 @@
 
 
     <!--*********** Menú Desplegable ***********-->
-    <div>
+    <div class="text-lg grid gap-1 pb-2 -mt-2">
         @if (btnRutes === true) {
         <a routerLink="/page-home" routerLinkActive="text-s" class="text-o font-semibold" (click)="routeActivate()">
-            <div class="flex items-end pl-2.5 mt-1">
+            <div class="flex items-end pl-2.5">
                 <i class="fas fa-home mr-1.5 mb-1"></i>
                 <span> Inicio </span>
             </div>
         </a>
 
         <a class="text-o font-semibold" (click)="optionsServices()">
-            <div class="flex items-end pl-2.5 mt-1">
+            <div class="flex items-end pl-2.5">
                 <i class="fa-solid fa-folder-open mr-1.5 mb-1"></i>
                 <span> Servicios </span>
                 <i class="fa-solid fa-angle-down ml-1.5 mb-0.5"></i>
@@ -86,29 +86,27 @@
         </a>
 
         @if (btnServices === true) {
-        <div class="text-sm -mt-1 mb-1">
-            <a routerLink="/all-services" routerLinkActive="text-s" class="text-o gap-x-0. font-semibold"
-                (click)="routeActivate()">
+        <div class="grid text-base -mt-2 mb-1 gap-y-1">
+            <a routerLink="/all-services" routerLinkActive="text-s" class="text-o gap-x-0. " (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <i class="fas fa-angle-right mr-1 mb-0.5"></i>
                     <span> Todos los servicios </span>
                 </div>
             </a>
-            <a routerLink="/corte-laser" routerLinkActive="text-s" class="text-o gap-x-0. font-semibold"
-                (click)="routeActivate()">
+            <a routerLink="/corte-laser" routerLinkActive="text-s" class="text-o gap-x-0. " (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <i class="fas fa-angle-right mr-1 mb-0.5"></i>
                     <span> Corte Laser </span>
                 </div>
             </a>
-            <a routerLink="/impresion-vinil" routerLinkActive="text-s" class="text-o gap-x-0.5 font-semibold"
+            <a routerLink="/impresion-vinil" routerLinkActive="text-s" class="text-o gap-x-0.5 "
                 (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <i class="fas fa-angle-right mr-1 mb-0.5"></i>
                     <span> Impresión en vinil </span>
                 </div>
             </a>
-            <a routerLink="/decor-vehiculos" routerLinkActive="text-s" class="text-o gap-x-0.5 font-semibold"
+            <a routerLink="/decor-vehiculos" routerLinkActive="text-s" class="text-o gap-x-0.5 "
                 (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <i class="fas fa-angle-right mr-1 mb-0.5"></i>
@@ -119,7 +117,7 @@
         }
 
         <a routerLink="/page-nosotros" routerLinkActive="text-s" class="text-o font-semibold" (click)="routeActivate()">
-            <div class="flex items-end pl-2.5 mt-2">
+            <div class="flex items-end pl-2.5">
                 <i class="fas fa-users mr-1.5 mb-1"></i>
                 <span> Nosotros </span>
             </div>
