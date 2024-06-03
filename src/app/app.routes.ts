@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import PageHomeComponent from './dashboard/page-home/page-home.component';
-import PageServicesComponent from './dashboard/page-services/page-services.component';
 
 export const routes: Routes = [
     {
@@ -16,8 +14,25 @@ export const routes: Routes = [
         loadComponent: () => import('./dashboard/page-nosotros/page-nosotros.component'),
     },
     {
-        path: 'page-services',
-        loadComponent: () => import('./dashboard/page-services/page-services.component'),
+        path: 'services',
+        loadComponent: () => import('./dashboard/page-services/page-services.component'), children: [
+            {
+                path: 'all-services',
+                loadComponent: () => import('./dashboard/page-services/all-services/all-services.component')
+            },
+            {
+                path: 'impresion-vinil',
+                loadComponent: () => import('./dashboard/page-services/impresion-vinil/impresion-vinil.component')
+            },
+            {
+                path: 'decor-vehiculos',
+                loadComponent: () => import('./dashboard/page-services/decor-vehiculos/decor-vehiculos.component')
+            },
+            {
+                path: 'corte-laser',
+                loadComponent: () => import('./dashboard/page-services/corte-laser/corte-laser.component')
+            },
+        ]
     },
     { path: '', redirectTo: '/page-home', pathMatch: 'full' },
     { path: '**', redirectTo: '/page-home', pathMatch: 'full' },
