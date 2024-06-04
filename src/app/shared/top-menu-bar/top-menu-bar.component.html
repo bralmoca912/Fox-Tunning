@@ -53,8 +53,8 @@
             </a>
             <!-- Grupo de menu desplegable -->
             <div class="flex group h-10 items-center">
-                <a class="gap-x-0.5 text-sm font-semibold pb-1 group-hover:text-m"
-                    [ngClass]="{'text-s': btnRouteServices, 'text-o': !btnRouteServices}">
+                <a class="text-o gap-x-0.5 text-sm font-semibold pb-1" [ngClass]="{
+                    'text-s': isServiceRoute, 'group-hover:text-m': !isServiceRoute}">
                     <div class="flex items-end px-1">
                         <i class="fa-solid fa-folder-open mb-0.5 mr-1"></i>
                         <span> Servicios </span>
@@ -63,32 +63,26 @@
                 </a>
                 <!-- Menú desplegable con hover -->
                 <div class="relative group-hover:block hidden">
-                    <div class="mt-5 -right-24 md:absolute bg-gray-300 dark:bg-gray-700 text-o rounded-md p-2">
-                        <a routerLink="page-services" routerLinkActive="text-s" class="menu-d-a-0 flex justify-center"
-                            (click)="routeServiceActive()">Todos los servicios
+                    <div class="mt-5 -right-24 md:absolute bg-gray-200 dark:bg-gray-700 text-o rounded-md p-2">
+                        <a routerLink="page-services" routerLinkActive="text-s"
+                            class="menu-d-a-0 flex justify-center">Todos los servicios
                             disponibles</a>
                         <ul class="md:w-64 grid grid-cols-2">
-                            <li><a routerLink="/p-s-letreros" routerLinkActive="text-s" class="menu-d-a"
-                                    (click)="routeServiceActive()">- Letreros</a>
+                            <li><a routerLink="/p-s-letreros" routerLinkActive="text-s" class="menu-d-a">- Letreros</a>
                             </li>
-                            <li><a routerLink="/p-s-marketing" routerLinkActive="text-s" class="menu-d-a"
-                                    (click)="routeServiceActive()">-
+                            <li><a routerLink="/p-s-marketing" routerLinkActive="text-s" class="menu-d-a">-
                                     Marketing</a></li>
-                            <li><a routerLink="/p-s-corte-laser" routerLinkActive="text-s" class="menu-d-a"
-                                    (click)="routeServiceActive()">- Corte
+                            <li><a routerLink="/p-s-corte-laser" routerLinkActive="text-s" class="menu-d-a">- Corte
                                     laser</a></li>
-                            <li><a routerLink="/p-s-instalacion" routerLinkActive="text-s" class="menu-d-a"
-                                    (click)="routeServiceActive()">-
+                            <li><a routerLink="/p-s-instalacion" routerLinkActive="text-s" class="menu-d-a">-
                                     Instalación</a></li>
-                            <li><a routerLink="/p-s-d-vehicular" routerLinkActive="text-s" class="menu-d-a flex"
-                                    (click)="routeServiceActive()">-
+                            <li><a routerLink="/p-s-d-vehicular" routerLinkActive="text-s" class="menu-d-a flex">-
                                     <span class="grid ml-1">
                                         <p class="-mb-2"> Decoración</p>
                                         <p> vehicular</p>
                                     </span>
                                 </a></li>
-                            <li><a routerLink="/p-s-p-personalizados" routerLinkActive="text-s" class="menu-d-a flex"
-                                    (click)="routeServiceActive()">-
+                            <li><a routerLink="/p-s-p-personalizados" routerLinkActive="text-s" class="menu-d-a flex">-
                                     <span class="grid ml-1">
                                         <p class="-mb-2">Productos</p>
                                         <p>personalizados</p>
@@ -125,7 +119,7 @@
 
 
     <!--*********** Menú en pantallas pequeñas ***********-->
-    <div class="text-lg grid gap-1 pb-2 -mt-2">
+    <div class="text-lg grid gap-1 pb-2 -mt-2 md:hidden">
         @if (btnRutes === true) {
         <a routerLink="/page-home" routerLinkActive="text-s" class="text-o font-semibold" (click)="routeActivate()">
             <div class="flex items-end pl-2.5">
@@ -134,7 +128,8 @@
             </div>
         </a>
 
-        <a class="text-o font-semibold" (click)="optionsServices()">
+        <a class="text-o font-semibold" (click)="optionsServices()" [ngClass]="{
+            'text-s': isServiceRoute}">
             <div class="flex items-end pl-2.5">
                 <i class="fa-solid fa-folder-open mr-1.5 mb-1"></i>
                 <span> Servicios </span>
@@ -144,44 +139,41 @@
 
         @if (btnServices === true) {
         <div class="grid text-base -mt-1 mb-1 gap-y-1">
-            <a routerLink="/page-services" routerLinkActive="text-s" class="text-o gap-x-0. "
-                (click)="routeServiceActive()">
+            <a routerLink="/page-services" routerLinkActive="text-s" class="text-o gap-x-0." (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <span> - Todos los servicios </span>
                 </div>
             </a>
-            <a routerLink="/p-s-letreros" routerLinkActive="text-s" class="text-o gap-x-0.5 "
-                (click)="routeServiceActive()">
+            <a routerLink="/p-s-letreros" routerLinkActive="text-s" class="text-o gap-x-0.5" (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <span> - Letreros </span>
                 </div>
             </a>
-            <a routerLink="/p-s-marketing" routerLinkActive="text-s" class="text-o gap-x-0.5 "
-                (click)="routeServiceActive()">
+            <a routerLink="/p-s-marketing" routerLinkActive="text-s" class="text-o gap-x-0.5" (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <span> - Marketing </span>
                 </div>
             </a>
-            <a routerLink="/p-s-corte-laser" routerLinkActive="text-s" class="text-o gap-x-0. "
-                (click)="routeServiceActive()">
+            <a routerLink="/p-s-corte-laser" routerLinkActive="text-s" class="text-o gap-x-0."
+                (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <span> - Corte Laser </span>
                 </div>
             </a>
-            <a routerLink="/p-s-instalacion" routerLinkActive="text-s" class="text-o gap-x-0.5 "
-                (click)="routeServiceActive()">
+            <a routerLink="/p-s-instalacion" routerLinkActive="text-s" class="text-o gap-x-0.5"
+                (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <span> - Instalación </span>
                 </div>
             </a>
-            <a routerLink="/p-s-d-vehicular" routerLinkActive="text-s" class="text-o gap-x-0.5 "
-                (click)="routeServiceActive()">
+            <a routerLink="/p-s-d-vehicular" routerLinkActive="text-s" class="text-o gap-x-0.5"
+                (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <span> - Decoración vehicular </span>
                 </div>
             </a>
-            <a routerLink="/p-s-p-personalizados" routerLinkActive="text-s" class="text-o gap-x-0.5 "
-                (click)="routeServiceActive()">
+            <a routerLink="/p-s-p-personalizados" routerLinkActive="text-s" class="text-o gap-x-0.5"
+                (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <span> - Productos personalizados </span>
                 </div>

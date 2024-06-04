@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top-menu-bar',
@@ -13,27 +13,32 @@ export class TopMenuBarComponent {
 
   constructor(private router: Router) { }
 
-  anchoDeTrazo: number = 1.5; // Valor inicial del ancho del trazo
+  anchoDeTrazo: number = 1.5;
   btnRutes: boolean = false;
   btnServices: boolean = false;
-  btnRouteServices: boolean = false;
+  isServiceRoute: boolean = false;
 
   cambiarAncho() { this.anchoDeTrazo = this.anchoDeTrazo === 1.5 ? 2.5 : 1.5; }
   isActive(route: string): boolean { return this.router.isActive(route, true); }
 
   optionsRutes() { this.btnRutes = !this.btnRutes; this.btnServices = false }
   optionsServices() { this.btnServices = !this.btnServices }
-  routeActivate() { this.btnRutes = this.btnServices = false; this.btnRouteServices = false; }
-  routeServiceActive() { this.btnRutes = this.btnServices = false; this.btnRouteServices = true }
+  routeActivate() { this.btnRutes = this.btnServices = false }
 
-  // items = [ // Array de rutas
-  //   { title: 'Inicio', route: '/page-home', icon: 'fas fa-home' },
-  //   {
-  //     title: 'Servicios', route: '/page-services', icon: 'fa-solid fa-folder-open',
-  //     children: [
-  //       { title: 'Todos los Servicios', route: '/page-services/impresion-vinil', icon: 'fa fa-check' }
-  //     ]
-  //   },
-  //   { title: 'Nosotros', route: '/page-nosotros', icon: 'fa-solid fa-users' },
-  // ];
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.checkRoutes();
+      }
+    });
+  }
+
+  checkRoutes(): void {
+    const currentRoute = this.router.url;
+    if (['/page-services', '/p-s-letreros', '/p-s-marketing', '/p-s-corte-laser', '/p-s-instalacion', '/p-s-d-vehicular', '/p-s-p-personalizados'].includes(currentRoute)) {
+      this.isServiceRoute = true;
+    } else {
+      this.isServiceRoute = false;
+    }
+  }
 }
