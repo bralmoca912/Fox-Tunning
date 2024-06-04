@@ -14,12 +14,8 @@ export const routes: Routes = [
         loadComponent: () => import('./dashboard/page-nosotros/page-nosotros.component'),
     },
     {
-        path: 'services',
+        path: 'page-services',
         loadComponent: () => import('./dashboard/page-services/page-services.component'),
-    },
-    {
-        path: 'all-services',
-        loadComponent: () => import('./dashboard/page-services/all-services/all-services.component')
     },
     {
         path: 'impresion-vinil',

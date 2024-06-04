@@ -1,0 +1,9 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .menu-d-a {@apply flex p-2 rounded-md font-medium dark:hover:text-white;}
+    .menu-d-a-0 {@apply flex p-2 font-medium dark:hover:text-white border-b border-gray-500;}
+}

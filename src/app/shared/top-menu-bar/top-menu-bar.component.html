@@ -41,13 +41,57 @@
 
 
 
-        <!--*********** Menú md ***********-->
-        <div class="hidden md:inline-flex gap-x-2 h-7" id="navigation">
-            <a routerLink="/page-home" routerLinkActive="text-s bor-s" class="text-o gap-x-0.5 text-sm font-semibold"
+        <!--*********** Menú en pantallas grandes ***********-->
+        <div class="hidden md:inline-flex items-center gap-x-3 h-7" id="navigation">
+            <a routerLink="/page-home" routerLinkActive="text-s bor-s"
+                class="text-o gap-x-0.5 text-sm font-semibold pb-1"
                 [ngClass]="{'hover:text-m': !isActive('/page-home')}">
                 <div class="flex items-end px-1">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-home mb-0.5 mr-1"></i>
                     <span> Inicio </span>
+                </div>
+            </a>
+
+            <div class="flex group h-10 items-center">
+                <a routerLink="/page-services" routerLinkActive="text-s"
+                    class="text-o gap-x-0.5 text-sm font-semibold pb-1 group-hover:text-m">
+                    <div class="flex items-end px-1">
+                        <i class="fa-solid fa-folder-open mb-0.5 mr-1"></i>
+                        <span> Servicios </span>
+                        <i class="fa-solid fa-angle-down mb-0.5 ml-0.5"></i>
+                    </div>
+                </a>
+
+                <div class="relative group-hover:block hidden">
+                    <div class="mt-5 -right-24 md:absolute bg-gray-300 dark:bg-gray-700 text-o rounded-md p-2">
+                        <a href="#" class="menu-d-a-0 flex justify-center">Todos los servicios disponibles</a>
+                        <ul class="md:w-64 grid grid-cols-2">
+                            <li class="menu-d-a"><a href="#">- Letreros</a></li>
+                            <li><a href="#" class="menu-d-a">- Marketing</a></li>
+                            <li><a href="#" class="menu-d-a">- Corte laser</a></li>
+                            <li><a href="#" class="menu-d-a">- Instalación</a></li>
+                            <li><a href="#" class="menu-d-a flex">-<span class="grid ml-1">
+                                        <p class="-mb-2"> Decoración</p>
+                                        <p> vehicular</p>
+                                    </span>
+                                </a></li>
+                            <li><a href="#" class="menu-d-a flex">-<span class="grid ml-1">
+                                        <p class="-mb-2">Productos</p>
+                                        <p>personalizados</p>
+                                    </span>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <a routerLink="/page-nosotros" routerLinkActive="text-s bor-s"
+                class="text-o gap-x-0.5 text-sm font-semibold pb-1"
+                [ngClass]="{'hover:text-m': !isActive('/page-nosotros')}">
+                <div class="flex items-end px-1">
+                    <i class="fas fa-users mb-0.5 mr-1"></i>
+                    <span> Nosotros </span>
                 </div>
             </a>
         </div>
@@ -67,7 +111,7 @@
 
 
 
-    <!--*********** Menú Desplegable ***********-->
+    <!--*********** Menú en pantallas pequeñas ***********-->
     <div class="text-lg grid gap-1 pb-2 -mt-2">
         @if (btnRutes === true) {
         <a routerLink="/page-home" routerLinkActive="text-s" class="text-o font-semibold" (click)="routeActivate()">
@@ -87,7 +131,7 @@
 
         @if (btnServices === true) {
         <div class="grid text-base -mt-2 mb-1 gap-y-1">
-            <a routerLink="/all-services" routerLinkActive="text-s" class="text-o gap-x-0. " (click)="routeActivate()">
+            <a routerLink="/page-services" routerLinkActive="text-s" class="text-o gap-x-0. " (click)="routeActivate()">
                 <div class="flex items-end pl-8">
                     <i class="fas fa-angle-right mr-1 mb-0.5"></i>
                     <span> Todos los servicios </span>
