@@ -16,14 +16,15 @@ export class TopMenuBarComponent {
   anchoDeTrazo: number = 1.5; // Valor inicial del ancho del trazo
   btnRutes: boolean = false;
   btnServices: boolean = false;
+  btnRouteServices: boolean = false;
 
   cambiarAncho() { this.anchoDeTrazo = this.anchoDeTrazo === 1.5 ? 2.5 : 1.5; }
   isActive(route: string): boolean { return this.router.isActive(route, true); }
 
   optionsRutes() { this.btnRutes = !this.btnRutes; this.btnServices = false }
   optionsServices() { this.btnServices = !this.btnServices }
-  routeActivate() { this.btnRutes = this.btnServices = false }
-
+  routeActivate() { this.btnRutes = this.btnServices = false; this.btnRouteServices = false; }
+  routeServiceActive() { this.btnRutes = this.btnServices = false; this.btnRouteServices = true }
 
   // items = [ // Array de rutas
   //   { title: 'Inicio', route: '/page-home', icon: 'fas fa-home' },

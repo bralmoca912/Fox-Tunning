@@ -38,8 +38,8 @@ export const routes: Routes = [
         loadComponent: () => import('./dashboard/page-services/p-s-marketing/p-s-marketing.component')
     },
     {
-        path: 'p-s-productos-p',
-        loadComponent: () => import('./dashboard/page-services/p-s-productos-p/p-s-productos-p.component')
+        path: 'p-s-p-personalizados',
+        loadComponent: () => import('./dashboard/page-services/p-s-p-personalizados/p-s-p-personalizados.component')
     },
     { path: '', redirectTo: '/page-home', pathMatch: 'full' },
     { path: '**', redirectTo: '/page-home', pathMatch: 'full' },
