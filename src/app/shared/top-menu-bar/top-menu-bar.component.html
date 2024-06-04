@@ -53,8 +53,7 @@
             </a>
 
             <div class="flex group h-10 items-center">
-                <a routerLink="/page-services" routerLinkActive="text-s"
-                    class="text-o gap-x-0.5 text-sm font-semibold pb-1 group-hover:text-m">
+                <a class="text-o gap-x-0.5 text-sm font-semibold pb-1 group-hover:text-m">
                     <div class="flex items-end px-1">
                         <i class="fa-solid fa-folder-open mb-0.5 mr-1"></i>
                         <span> Servicios </span>
@@ -62,15 +61,15 @@
                     </div>
                 </a>
 
-                <div class="relative group-hover:block hidden">
+                <div class="relative group-hover:block ">
                     <div class="mt-5 -right-24 md:absolute bg-gray-300 dark:bg-gray-700 text-o rounded-md p-2">
                         <a href="#" class="menu-d-a-0 flex justify-center">Todos los servicios disponibles</a>
                         <ul class="md:w-64 grid grid-cols-2">
-                            <li class="menu-d-a"><a href="#">- Letreros</a></li>
-                            <li><a href="#" class="menu-d-a">- Marketing</a></li>
-                            <li><a href="#" class="menu-d-a">- Corte laser</a></li>
-                            <li><a href="#" class="menu-d-a">- Instalación</a></li>
-                            <li><a href="#" class="menu-d-a flex">-<span class="grid ml-1">
+                            <li class="menu-d-a"><a routerLink="/">- Letreros</a></li>
+                            <li><a routerLink="/" class="menu-d-a">- Marketing</a></li>
+                            <li><a routerLink="/" class="menu-d-a">- Corte laser</a></li>
+                            <li><a routerLink="/" class="menu-d-a">- Instalación</a></li>
+                            <li><a routerLink="/" class="menu-d-a flex">-<span class="grid ml-1">
                                         <p class="-mb-2"> Decoración</p>
                                         <p> vehicular</p>
                                     </span>
@@ -84,7 +83,6 @@
                     </div>
                 </div>
             </div>
-
 
             <a routerLink="/page-nosotros" routerLinkActive="text-s bor-s"
                 class="text-o gap-x-0.5 text-sm font-semibold pb-1"
@@ -130,31 +128,45 @@
         </a>
 
         @if (btnServices === true) {
-        <div class="grid text-base -mt-2 mb-1 gap-y-1">
+        <div class="grid text-base -mt-1 mb-1 gap-y-1">
             <a routerLink="/page-services" routerLinkActive="text-s" class="text-o gap-x-0. " (click)="routeActivate()">
                 <div class="flex items-end pl-8">
-                    <i class="fas fa-angle-right mr-1 mb-0.5"></i>
-                    <span> Todos los servicios </span>
+                    <span> - Todos los servicios </span>
                 </div>
             </a>
-            <a routerLink="/corte-laser" routerLinkActive="text-s" class="text-o gap-x-0. " (click)="routeActivate()">
+            <a routerLink="/p-s-letreros" routerLinkActive="text-s" class="text-o gap-x-0.5 " (click)="routeActivate()">
                 <div class="flex items-end pl-8">
-                    <i class="fas fa-angle-right mr-1 mb-0.5"></i>
-                    <span> Corte Laser </span>
+                    <span> - Letreros </span>
                 </div>
             </a>
-            <a routerLink="/impresion-vinil" routerLinkActive="text-s" class="text-o gap-x-0.5 "
+            <a routerLink="/p-s-marketing" routerLinkActive="text-s" class="text-o gap-x-0.5 "
                 (click)="routeActivate()">
                 <div class="flex items-end pl-8">
-                    <i class="fas fa-angle-right mr-1 mb-0.5"></i>
-                    <span> Impresión en vinil </span>
+                    <span> - Marketing </span>
                 </div>
             </a>
-            <a routerLink="/decor-vehiculos" routerLinkActive="text-s" class="text-o gap-x-0.5 "
+            <a routerLink="/p-s-corte-laser" routerLinkActive="text-s" class="text-o gap-x-0. "
                 (click)="routeActivate()">
                 <div class="flex items-end pl-8">
-                    <i class="fas fa-angle-right mr-1 mb-0.5"></i>
-                    <span> Decoración de Vehículos </span>
+                    <span> - Corte Laser </span>
+                </div>
+            </a>
+            <a routerLink="/p-s-instalacion" routerLinkActive="text-s" class="text-o gap-x-0.5 "
+                (click)="routeActivate()">
+                <div class="flex items-end pl-8">
+                    <span> - Instalación </span>
+                </div>
+            </a>
+            <a routerLink="/p-s-d-vehicular" routerLinkActive="text-s" class="text-o gap-x-0.5 "
+                (click)="routeActivate()">
+                <div class="flex items-end pl-8">
+                    <span> - Decoración vehicular </span>
+                </div>
+            </a>
+            <a routerLink="/p-s-productos-p" routerLinkActive="text-s" class="text-o gap-x-0.5 "
+                (click)="routeActivate()">
+                <div class="flex items-end pl-8">
+                    <span> - Productos personalizados </span>
                 </div>
             </a>
         </div>

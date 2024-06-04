@@ -18,16 +18,28 @@ export const routes: Routes = [
         loadComponent: () => import('./dashboard/page-services/page-services.component'),
     },
     {
-        path: 'impresion-vinil',
-        loadComponent: () => import('./dashboard/page-services/impresion-vinil/impresion-vinil.component')
+        path: 'p-s-corte-laser',
+        loadComponent: () => import('./dashboard/page-services/p-s-corte-laser/p-s-corte-laser.component')
     },
     {
-        path: 'decor-vehiculos',
-        loadComponent: () => import('./dashboard/page-services/decor-vehiculos/decor-vehiculos.component')
+        path: 'p-s-d-vehicular',
+        loadComponent: () => import('./dashboard/page-services/p-s-d-vehicular/p-s-d-vehicular.component')
     },
     {
-        path: 'corte-laser',
-        loadComponent: () => import('./dashboard/page-services/corte-laser/corte-laser.component')
+        path: 'p-s-instalacion',
+        loadComponent: () => import('./dashboard/page-services/p-s-instalacion/p-s-instalacion.component')
+    },
+    {
+        path: 'p-s-letreros',
+        loadComponent: () => import('./dashboard/page-services/p-s-letreros/p-s-letreros.component')
+    },
+    {
+        path: 'p-s-marketing',
+        loadComponent: () => import('./dashboard/page-services/p-s-marketing/p-s-marketing.component')
+    },
+    {
+        path: 'p-s-productos-p',
+        loadComponent: () => import('./dashboard/page-services/p-s-productos-p/p-s-productos-p.component')
     },
     { path: '', redirectTo: '/page-home', pathMatch: 'full' },
     { path: '**', redirectTo: '/page-home', pathMatch: 'full' },
