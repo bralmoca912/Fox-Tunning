@@ -7,7 +7,7 @@ import { Router, RouterLink, RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule, NgClass, RouterLink],
   templateUrl: './top-menu-bar.component.html',
-  styleUrl: './top-menu-bar.component.css'
+  styles: ''
 })
 export class TopMenuBarComponent {
 
