@@ -1,1 +1,0 @@
-import{Ja as i,Ka as a,Sa as r,Ta as s,W as n}from"./chunk-UA6ZDMK3.js";var p=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-decor-vehiculos"]],standalone:!0,features:[s],decls:2,vars:0,template:function(o,d){o&1&&(i(0,"p"),r(1,"decor-vehiculos works!"),a())}});let t=e;return t})();export{p as default};

@@ -1,0 +1,1 @@
+import{Ja as a,Ka as r,Sa as s,Ta as i,W as o}from"./chunk-UA6ZDMK3.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-p-s-corte-laser"]],standalone:!0,features:[i],decls:2,vars:0,template:function(n,c){n&1&&(a(0,"p"),s(1,"p-s-corte-laser works!"),r())}});let t=e;return t})();export{d as default};

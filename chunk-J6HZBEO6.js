@@ -1,1 +1,0 @@
-import{Ja as o,Ka as a,Sa as r,Ta as s,W as i}from"./chunk-UA6ZDMK3.js";var c=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-impresion-vinil"]],standalone:!0,features:[s],decls:2,vars:0,template:function(n,l){n&1&&(o(0,"p"),r(1,"impresion-vinil works!"),a())}});let t=e;return t})();export{c as default};
