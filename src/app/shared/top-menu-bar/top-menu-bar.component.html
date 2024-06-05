@@ -43,7 +43,7 @@
 
         <!--*********** Menú en pantallas grandes ***********-->
         <div class="hidden md:inline-flex items-center gap-x-3 h-7" id="navigation">
-            <a routerLink="/page-home" routerLinkActive="text-s bor-s"
+            <a routerLink="/page-home" routerLinkActive="text-s bor-b-s"
                 class="text-o gap-x-0.5 text-sm font-semibold pb-1"
                 [ngClass]="{'hover:text-m': !isActive('/page-home')}" (click)="routeActivate()">
                 <div class="flex items-end px-1">
@@ -54,7 +54,7 @@
             <!-- Grupo de menu desplegable -->
             <div class="flex group h-10 items-center">
                 <a class="text-o gap-x-0.5 text-sm font-semibold pb-1" [ngClass]="{
-                    'text-s': isServiceRoute, 'group-hover:text-m': !isServiceRoute}">
+                    ' bor-b-s , text-s': isServiceRoute, 'group-hover:text-m': !isServiceRoute}">
                     <div class="flex items-end px-1">
                         <i class="fa-solid fa-folder-open mb-0.5 mr-1"></i>
                         <span> Servicios </span>
@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <a routerLink="/page-nosotros" routerLinkActive="text-s bor-s"
+            <a routerLink="/page-nosotros" routerLinkActive="text-s bor-b-s"
                 class="text-o gap-x-0.5 text-sm font-semibold pb-1"
                 [ngClass]="{'hover:text-m': !isActive('/page-nosotros')}" (click)="routeActivate()">
                 <div class="flex items-end px-1">

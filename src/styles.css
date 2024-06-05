@@ -19,12 +19,17 @@
     .text-s {@apply text-green-500 dark:text-green-400;}
 
     .bor-b-m {@apply border-gray-700 dark:border-gray-200 border-b;}
-    .bor-s   {@apply border-green-500 dark:border-green-400 border-b-2;}
+    .bor-b-s   {@apply border-green-500 dark:border-green-400 border-b-2;}
     
     .c-btn-1 {@apply text-white bg-green-500 dark:text-gray-900 dark:bg-green-400 rounded-full py-1 px-1.5 font-bold hover:bg-s}
+    .c-btn-2 {@apply px-6 py-3 sm:px-10 sm:py-4 text-base border border-green-500 font-bold hover:bg-s}
     .c-icon-neon {@apply bg-green-200 text-blue-600 dark:bg-green-700 dark:text-green-200}
     .menu-d-a {@apply flex p-2 rounded-md font-medium hover:text-i;}
     .menu-d-a-0 {@apply flex p-2 font-medium hover:text-i border-b border-gray-500;}
 
     .p-g {@apply px-2 sm:px-4 lg:px-6 py-6 sm:py-7 lg:py-8;}
+}
+
+@layer utilities {
+    .shadow-i {box-shadow: 3px 3px 10px rgb(105, 167, 35);}
 }
