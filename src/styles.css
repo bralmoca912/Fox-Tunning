@@ -26,6 +26,5 @@
     .menu-d-a {@apply flex p-2 rounded-md font-medium hover:text-i;}
     .menu-d-a-0 {@apply flex p-2 font-medium hover:text-i border-b border-gray-500;}
 
-    .px-g {@apply px-2 sm:px-4 lg:px-6;}
-    .py-g {@apply py-6 sm:py-7 lg:py-8;}
+    .p-g {@apply px-2 sm:px-4 lg:px-6 py-6 sm:py-7 lg:py-8;}
 }
