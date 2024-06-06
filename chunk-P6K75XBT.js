@@ -1,1 +1,0 @@
-import{Ja as i,Ka as o,Sa as s,Ta as r,W as a}from"./chunk-UA6ZDMK3.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=a({type:e,selectors:[["app-p-s-instalacion"]],standalone:!0,features:[r],decls:2,vars:0,template:function(n,c){n&1&&(i(0,"p"),s(1,"p-s-instalacion works!"),o())}});let t=e;return t})();export{d as default};

@@ -1,0 +1,1 @@
+import{La as r,Ma as a,Ua as s,Va as i,X as o}from"./chunk-HV2BD56T.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-p-s-letreros"]],standalone:!0,features:[i],decls:2,vars:0,template:function(n,l){n&1&&(r(0,"p"),s(1,"p-s-letreros works!"),a())}});let t=e;return t})();export{d as default};
