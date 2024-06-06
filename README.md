@@ -39,7 +39,7 @@ También probar una demostración en vivo de Fox-Tunning con el link en el anter
 
 <a href="https://bralmoca912.github.io/Fox-Tunning" target="_blank">
 <h4>Página en celulares sin el menú</h4>
-	<img style="margin-top: -30px" src="https://i.ibb.co/bgLP8Tm/Fox-Tunnig-Demo-5.png" width="200" height="auto">
+	<img style="margin-top: -30px" src="https://i.ibb.co/4pYTYqd/Fox-Tunnig-Demo-5.png" width="200" height="auto">
 </a>
 <br>
 
