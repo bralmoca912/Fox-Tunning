@@ -14,14 +14,32 @@ Fox Tunning es una aplicación web desarrollada con Angular para presentar de ma
 También probar una demostración en vivo de Fox-Tunning con el link en el anterior enlace.
 
 <a href="https://bralmoca912.github.io/Fox-Tunning" target="_blank">
-<h4>Página de inicio</h4>
+<h4>Página de inicio modo oscuro</h4>
 	<img style="margin-top: -30px" src="https://i.ibb.co/HNmYvyd/Fox-Tunnig-Demo-1.png" width="700" height="auto">
 </a>
 <br>
 
 <a href="https://bralmoca912.github.io/Fox-Tunning" target="_blank">
-<h4>Página de nosotros y menú desplegable</h4>
+<h4>Página de nosotros modo claro</h4>
+	<img style="margin-top: -30px" src="https://i.ibb.co/FB1cPmF/Fox-Tunnig-Demo-2.png" width="700" height="auto">
+</a>
+<br>
+
+<a href="https://bralmoca912.github.io/Fox-Tunning" target="_blank">
+<h4>Página de nosotros modo oscuro</h4>
 	<img style="margin-top: -30px" src="https://i.ibb.co/hdRqP04/Fox-Tunnig-Demo-2.png" width="700" height="auto">
+</a>
+<br>
+
+<a href="https://bralmoca912.github.io/Fox-Tunning" target="_blank">
+<h4>Página en celulares con el menú desplegado</h4>
+	<img style="margin-top: -30px" src="https://i.ibb.co/nwcgGBW/Fox-Tunnig-Demo-4.png" width="200" height="auto">
+</a>
+<br>
+
+<a href="https://bralmoca912.github.io/Fox-Tunning" target="_blank">
+<h4>Página en celulares sin el menú</h4>
+	<img style="margin-top: -30px" src="https://i.ibb.co/bgLP8Tm/Fox-Tunnig-Demo-5.png" width="200" height="auto">
 </a>
 <br>
 
