@@ -1,1 +1,16 @@
-<p>p-s-marketing works!</p>
+<!--************* Section 1 *************-->
+<section>
+    <div class="max-w-screen-xl mx-auto p-g">
+        <div class="flex flex-col p-4">
+            <h1 class="text-2xl font-bold mb-4">Lista Inicial</h1>
+            <ul>
+                @for (item of items; track $index) {
+                <li (click)="addItemToFavorites(item)" class="cursor-pointer hover:bg-gray-200 p-2">
+                    {{ item.name }}
+                </li>
+                }
+            </ul>
+        </div>
+
+    </div>
+</section>
