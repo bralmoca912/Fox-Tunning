@@ -11,7 +11,7 @@
     .bg-i {@apply bg-gray-200 bg-opacity-80 dark:bg-gray-800;}
     .bg-m {@apply bg-gray-100 bg-opacity-100 dark:bg-gray-800 dark:bg-opacity-80;}
     .bg-o {@apply bg-gray-50 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50;}
-    .bg-s {@apply bg-green-400 dark:bg-green-300;}
+    .bg-s {@apply bg-green-400 dark:bg-green-400;}
 
     .text-i {@apply text-black dark:text-white;}
     .text-m {@apply text-gray-700 dark:text-gray-200;}
@@ -21,7 +21,7 @@
     .bor-b-m {@apply border-gray-700 dark:border-gray-200 border-b;}
     .bor-b-s   {@apply border-green-500 dark:border-green-400 border-b-2;}
     
-    .c-btn-1 {@apply text-white bg-green-500 dark:text-gray-900 dark:bg-green-400 rounded-full py-1 px-1.5 font-bold hover:bg-s}
+    .c-btn-1 {@apply text-white bg-green-500 dark:text-gray-900 dark:bg-green-500 rounded-full py-1 px-1.5 font-bold hover:bg-s}
     .c-btn-2 {@apply px-2.5 py-2 sm:px-8 sm:py-3 rounded-lg border font-bold uppercase text-xs}
     .c-icon-neon {@apply bg-green-200 text-blue-600 dark:bg-green-700 dark:text-green-200}
     .menu-d-a {@apply flex p-2 rounded-md font-medium hover:text-i;}
