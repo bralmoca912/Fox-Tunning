@@ -1,4 +1,7 @@
 export interface Item {
     id: number;
-    name: string;
+    title: string;
+    tamMin: string;
+    tamMax: string;
+    urlImg: string;
 }

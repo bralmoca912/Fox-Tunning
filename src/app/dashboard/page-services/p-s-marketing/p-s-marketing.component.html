@@ -6,8 +6,9 @@
             <ul>
                 @for (item of items; track $index) {
                 <li (click)="addItemToFavorites(item)" class="cursor-pointer hover:bg-gray-200 p-2">
-                    {{ item.name }}
+                    {{ item.title }}
                 </li>
+                <img [src]="item.urlImg" alt="{{ item.title }}" class="h-16 mr-2"> <!-- Aquí se muestra la imagen -->
                 }
             </ul>
         </div>
