@@ -1,1 +1,0 @@
-import{La as a,Ma as s,Ua as i,Va as p,X as o}from"./chunk-HV2BD56T.js";var c=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-p-s-p-personalizados"]],standalone:!0,features:[p],decls:2,vars:0,template:function(n,d){n&1&&(a(0,"p"),i(1,"p-s-p-personalizados works!"),s())}});let t=e;return t})();export{c as default};

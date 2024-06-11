@@ -1,1 +1,0 @@
-import{La as i,Ma as o,Ua as s,Va as r,X as a}from"./chunk-HV2BD56T.js";var d=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=a({type:e,selectors:[["app-p-s-instalacion"]],standalone:!0,features:[r],decls:2,vars:0,template:function(n,c){n&1&&(i(0,"p"),s(1,"p-s-instalacion works!"),o())}});let t=e;return t})();export{d as default};
