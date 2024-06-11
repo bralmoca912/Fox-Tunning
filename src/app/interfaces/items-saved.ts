@@ -4,4 +4,5 @@ export interface Item {
     tamMin: string;
     tamMax: string;
     urlImg: string;
+    isFavorite?: boolean;
 }

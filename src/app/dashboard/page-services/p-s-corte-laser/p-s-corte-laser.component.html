@@ -1,1 +1,38 @@
-<p>p-s-corte-laser works!</p>
+<!--************* Section 1 *************-->
+<section>
+    <div class="max-w-screen-xl mx-auto p-g">
+        <div class="max-w-3xl mx-auto text-center text-[10px] sm:text-base ">
+            <h2 class="text-blue-500">Nuestros servicios</h2>
+            <h1 class="text-2xl sm:text-5xl mb-5">Corte y grabado Laser</h1>
+            <p>Explora nuevas posibilidades con precisión y creatividad. Nuestros servicios de corte láser te permiten
+                materializar tus ideas en una amplia gama de materiales, desde madera, acrílico, metal.</p>
+        </div>
+    </div>
+</section>
+
+<!--************* Section 2 *************-->
+<section>
+    <div class="max-w-screen-xl mx-auto p-g grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
+        <!-- Imag 1 -->
+        @for (item of items; track $index) {
+        <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
+            <div class="flex items-end justify-end h-56 w-full bg-cover"
+                [style.background-image]="'url(' + item.urlImg + ')'" style="background-position: center;">
+                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500"
+                    (click)="addItemToFavorites(item)">
+                    <i class="fa fa-heart fa-lg"></i>
+                </button>
+            </div>
+            <div class="px-5 py-3 bg-i">
+                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase"> {{item.title}}
+                </h3>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño mínimo: {{item.tamMin}}
+                </span>
+                <br>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño máximo: {{item.tamMax}}
+                </span>
+            </div>
+        </div>
+        }
+    </div>
+</section>

@@ -3,27 +3,35 @@
     <div class="max-w-screen-xl mx-auto p-g">
         <div class="max-w-3xl mx-auto text-center text-[10px] sm:text-base ">
             <h2 class="text-blue-500">Fox-Tunning</h2>
-            <h1 class="text-2xl sm:text-5xl mb-5">Servicios que mas te gustaron</h1>
+            <h1 class="text-2xl sm:text-5xl mb-5">Tus Servicios Favoritos</h1>
         </div>
     </div>
 </section>
 
 
-<!--************* Section 1 *************-->
+<!--************* Section 2 *************-->
 <section>
-    <div class="max-w-screen-xl mx-auto p-g">
-        <div class="flex border items-center h-40">
-            <h1 class="text-lg w-52 inline-flex items-center text-center h-full border-r">Lista inicial sin guardar</h1>
-            <div class="flex flex-col p-4">
-                <h1 class="text-2xl font-bold mb-4">Favoritos</h1>
-                <ul>
-                    <li *ngFor="let item of (selectedItems$ | async)" (click)="removeItemFromFavorites(item)"
-                        class="cursor-pointer hover:bg-gray-200 p-2">
-                        {{ item.title }}
-                    </li>
-                </ul>
+    <div class="max-w-screen-xl mx-auto p-g grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
+        <!-- Imag 1 -->
+        @for (item of selectedItems$ | async; track $index) {
+        <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
+            <div class="flex items-end justify-end h-56 w-full bg-cover"
+                [style.background-image]="'url(' + item.urlImg + ')'" style="background-position: center;">
+                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500"
+                    (click)="removeItemFromFavorites(item)">
+                    <i class="fa fa-heart fa-lg"></i>
+                </button>
             </div>
-
+            <div class="px-5 py-3 bg-i">
+                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase"> {{item.title}}
+                </h3>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño mínimo: {{item.tamMin}}
+                </span>
+                <br>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño máximo: {{item.tamMax}}
+                </span>
+            </div>
         </div>
+        }
     </div>
 </section>

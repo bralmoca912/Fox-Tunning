@@ -3,16 +3,12 @@
     <div class="max-w-screen-xl mx-auto p-g">
         <div class="max-w-3xl mx-auto text-center text-[10px] sm:text-base ">
             <h2 class="text-blue-500">Nuestros servicios</h2>
-            <h1 class="text-2xl sm:text-5xl mb-5">Diseño y costrucción de letreros</h1>
-            <p>Ofrecemos una amplia variedad de letreros personalizados, diseñados y construidos con materiales de alta
-                calidad según tus preferencias. Nuestra experiencia garantiza letreros duraderos y atractivos que se
-                adaptan perfectamente a tus necesidades.</p>
+            <h1 class="text-2xl sm:text-5xl mb-5">Marketing</h1>
+            <p>Potencia tu presencia con estrategias profesionales. Desde letreros llamativos hasta tarjetas de
+                presentación únicas, destacamos en la decoración de espacios con vinilos y materiales pagables.</p>
         </div>
     </div>
 </section>
-
-
-
 
 <!--************* Section 2 *************-->
 <section>
@@ -22,16 +18,19 @@
         <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
             <div class="flex items-end justify-end h-56 w-full bg-cover"
                 [style.background-image]="'url(' + item.urlImg + ')'" style="background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500">
+                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500"
+                    (click)="addItemToFavorites(item)">
                     <i class="fa fa-heart fa-lg"></i>
                 </button>
             </div>
             <div class="px-5 py-3 bg-i">
-                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase">Letreros en lona
-                    cortos</h3>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño mínimo: 2m x 1m</span>
+                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase"> {{item.title}}
+                </h3>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño mínimo: {{item.tamMin}}
+                </span>
                 <br>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño máximo: 20m x 5m</span>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño máximo: {{item.tamMax}}
+                </span>
             </div>
         </div>
         }
