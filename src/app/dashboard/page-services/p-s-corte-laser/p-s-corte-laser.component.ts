@@ -21,7 +21,12 @@ export default class PSCorteLaserComponent {
   }
 
   addItemToFavorites(item: Item) {
-    this.itemsService.addItem(item);
+    item.isFavorite = !item.isFavorite;  // Cambia el estado de favorito
+    if (item.isFavorite) {
+      this.itemsService.addItem(item);
+    } else {
+      this.itemsService.removeItem(item);
+    }
   }
 
   items: Item[] = [

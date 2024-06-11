@@ -95,7 +95,7 @@ export default class PSDVehicularComponent {
       isFavorite: false
     },
     {
-      id: 39,
+      id: 50,
       title: 'Luminaria',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
