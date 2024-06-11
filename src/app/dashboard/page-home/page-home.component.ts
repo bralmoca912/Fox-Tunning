@@ -17,7 +17,7 @@ export default class PageHomeComponent {
     // Mostrar la alerta durante 5 segundos
     setTimeout(() => {
       this.showAlert = false; // Ocultar la alerta después de 5 segundos
-    }, 10000);
+    }, 6000);
   }
 
 }
