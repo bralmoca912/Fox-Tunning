@@ -15,99 +15,25 @@
 <section>
     <div class="max-w-screen-xl mx-auto p-g grid lg:grid-cols-3 sm:grid-cols-2 gap-5">
         <!-- Imag 1 -->
+        @for (item of items; track $index) {
         <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
             <div class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://scontent.fcue12-1.fna.fbcdn.net/v/t39.30808-6/402936868_3532636257002230_8023856632418873848_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=8_7xk7PZD_8Q7kNvgEFccwS&_nc_ht=scontent.fcue12-1.fna&oh=00_AYBiLom52NW-hNG93jrSv6rBI4n0JEuZ4bKGmdF5uptuNg&oe=666C1BE4'); background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500">
+                [style.background-image]="'url(' + item.urlImg + ')'" style="background-position: center;">
+                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500"
+                    (click)="addItemToFavorites(item)">
                     <i class="fa fa-heart fa-lg"></i>
                 </button>
             </div>
             <div class="px-5 py-3 bg-i">
-                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase">Letreros en lona
-                    cortos</h3>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño mínimo: 2m x 1m</span>
-                <br>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño máximo: 20m x 5m</span>
-            </div>
-        </div>
-        <!-- Imag 2 -->
-        <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
-            <div class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://scontent.fcue12-1.fna.fbcdn.net/v/t39.30808-6/421582026_3578198649112657_6538022679366715022_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=55dAZ2mfXDsQ7kNvgHqzXSz&_nc_ht=scontent.fcue12-1.fna&oh=00_AYC3DTvE47Mcd_q84solyzvOrJzVROzjxx6gbPXuQibdiA&oe=666C38DA'); background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500">
-                    <i class="fa fa-heart fa-lg"></i>
-                </button>
-            </div>
-            <div class="px-5 py-3 bg-i">
-                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase">Letreros en lona
-                    largos</h3>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño mínimo: 2m x 1m</span>
-                <br>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño máximo: 20m x 5m</span>
-            </div>
-        </div>
-        <!-- Imag 3 -->
-        <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
-            <div class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://scontent.fcue12-1.fna.fbcdn.net/v/t39.30808-6/364760188_3465235607075629_8238018555992261234_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=vhfrm25WBBMQ7kNvgGPdWSY&_nc_ht=scontent.fcue12-1.fna&oh=00_AYADW3s8azEsVqEGJs8lesojyyw3D1dKdZqLnOQkRg6Y4Q&oe=666C13D6'); background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500">
-                    <i class="fa fa-heart fa-lg"></i>
-                </button>
-            </div>
-            <div class="px-5 py-3 bg-i">
-                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase">Letreros de
-                    interiores</h3>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño mínimo: 2m x 1m</span>
-                <br>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño máximo: 20m x 5m</span>
-            </div>
-        </div>
-        <!-- Imag 4 -->
-        <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
-            <div class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://scontent.fcue12-1.fna.fbcdn.net/v/t39.30808-6/403703564_3532638197002036_5993356248544759412_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=AFeIzd5kYHsQ7kNvgGDasvs&_nc_ht=scontent.fcue12-1.fna&oh=00_AYDu8hJvwcEanfmQJpv6ylQo8-jZrdKRfxUjRzNnCXhD1Q&oe=666C12CE'); background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500">
-                    <i class="fa fa-heart fa-lg"></i>
-                </button>
-            </div>
-            <div class="px-5 py-3 bg-i">
-                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase">Letreros de
-                    advertencia</h3>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño mínimo: 2m x 1m</span>
-                <br>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño máximo: 20m x 5m</span>
-            </div>
-        </div>
-        <!-- Imag 5 -->
-        <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
-            <div class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://scontent.fcue12-1.fna.fbcdn.net/v/t39.30808-6/404299384_3532632297002626_2076417696025168266_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CPRoeAVKX6UQ7kNvgHMLuO3&_nc_ht=scontent.fcue12-1.fna&oh=00_AYBmTAW2ByljeT2UurYcMhonxvZYXhFFg7Eps2Q023fryw&oe=666C284C'); background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500">
-                    <i class="fa fa-heart fa-lg"></i>
-                </button>
-            </div>
-            <div class="px-5 py-3 bg-i">
-                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase">Letreros luminosos
+                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase"> {{item.title}}
                 </h3>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño mínimo: 2m x 1m</span>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño mínimo: {{item.tamMin}}
+                </span>
                 <br>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño máximo: 20m x 5m</span>
+                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm"> Tamaño máximo: {{item.tamMax}}
+                </span>
             </div>
         </div>
-        <!-- Imag 6 -->
-        <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
-            <div class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://scontent.fcue12-1.fna.fbcdn.net/v/t39.30808-6/404312615_3532621357003720_8580229140015793974_n.jpg?stp=cp6_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=uPGIEz47jicQ7kNvgE4vju2&_nc_ht=scontent.fcue12-1.fna&oh=00_AYA4dxYjk9b9QQ5MGU48dL8wkpNjl4me3zgHdLsclu75fA&oe=666C3F33'); background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500">
-                    <i class="fa fa-heart fa-lg"></i>
-                </button>
-            </div>
-            <div class="px-5 py-3 bg-i">
-                <h3 class="text-gray-700 dark:text-white text-md sm:text-lg font-semibold uppercase">Letreros 3D</h3>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño mínimo: 2m x 1m</span>
-                <br>
-                <span class="dark:text-gray-300 text-gray-500 mt-2 text-[10px] text-sm">Tamaño máximo: 20m x 5m</span>
-            </div>
-        </div>
+        }
     </div>
 </section>
