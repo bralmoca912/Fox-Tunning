@@ -19,8 +19,10 @@
         <div class="w-full sm:max-w-sm max-w-xs mx-auto rounded-md shadow-md overflow-hidden">
             <div class="flex items-end justify-end h-56 w-full bg-cover"
                 [style.background-image]="'url(' + item.urlImg + ')'" style="background-position: center;">
-                <button class="w-9 h-9 rounded-md bg-green-600 text-white mx-5 -mb-4 hover:bg-green-500"
-                    (click)="addItemToFavorites(item)">
+                <button class="w-9 h-9 rounded-md mx-5 -mb-4" (click)="addItemToFavorites(item)" [ngClass]="{
+                        'bg-slate-500 text-gray-300 hover:bg-green-600': !item.isFavorite,
+                        'bg-green-600 text-white': item.isFavorite
+                      }">
                     <i class="fa fa-heart fa-lg"></i>
                 </button>
             </div>

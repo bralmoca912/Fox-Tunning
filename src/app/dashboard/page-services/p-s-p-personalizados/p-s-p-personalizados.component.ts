@@ -12,7 +12,13 @@ import { NgClass } from '@angular/common';
 })
 export default class PSPPersonalizadosComponent {
 
-  constructor(private itemsService: ItemsSavedService) { }
+  constructor(private itemsService: ItemsSavedService) {
+    this.itemsService.selectedItems$.subscribe(selectedItems => {
+      this.items.forEach(item => {
+        item.isFavorite = selectedItems.some(selectedItem => selectedItem.id === item.id);
+      });
+    });
+  }
 
   addItemToFavorites(item: Item) {
     item.isFavorite = !item.isFavorite;  // Cambia el estado de favorito
