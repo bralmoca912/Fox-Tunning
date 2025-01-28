@@ -8,20 +8,21 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [NgClass],
   templateUrl: './p-s-instalacion.component.html',
-  styles: ``
+  styles: ``,
 })
 export default class PSInstalacionComponent {
-
   constructor(private itemsService: ItemsSavedService) {
-    this.itemsService.selectedItems$.subscribe(selectedItems => {
-      this.items.forEach(item => {
-        item.isFavorite = selectedItems.some(selectedItem => selectedItem.id === item.id);
+    this.itemsService.selectedItems$.subscribe((selectedItems) => {
+      this.items.forEach((item) => {
+        item.isFavorite = selectedItems.some(
+          (selectedItem) => selectedItem.id === item.id
+        );
       });
     });
   }
 
   addItemToFavorites(item: Item) {
-    item.isFavorite = !item.isFavorite;  // Cambia el estado de favorito
+    item.isFavorite = !item.isFavorite; // Cambia el estado de favorito
     if (item.isFavorite) {
       this.itemsService.addItem(item);
     } else {
@@ -35,57 +36,63 @@ export default class PSInstalacionComponent {
       title: 'Instalación de Cajas de audio y sonido',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/2F3YBLF/Instalacion-Cajas-de-audio.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/instalacion/Instalacion-Cajas-de-audio.jpg',
+      isFavorite: false,
     },
     {
       id: 27,
       title: 'Instalación de publicidad en interiores',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/BN8K72V/Todos-Instalaci-n.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/instalacion/todos-Instalacion.jpg',
+      isFavorite: false,
     },
     {
       id: 28,
       title: 'Instalación de sellos vehiculares públicos o privados',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/B4W4QHV/Instalacion-sellos-v.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/instalacion/Instalacion-sellos-v.jpg',
+      isFavorite: false,
     },
     {
       id: 29,
       title: 'Instalación de gráficos en ventanas',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/8r5BVps/Inicio-pesta-as.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/instalacion/Instalacion-graficos-ventanas.jpg',
+      isFavorite: false,
     },
     {
       id: 30,
       title: 'Instalación de sellos publicitarios en negocios',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/9tgR4zr/Marketing-stikers-y-etiquetas.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/instalacion/Instalacion-sellos-negocios.jpg',
+      isFavorite: false,
     },
     {
       id: 31,
       title: 'Instalación de letreros de todo tamaño',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/zSvPTKJ/Instalacion-letreros-todo-tama-o.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/instalacion/Instalacion-letreros-todo-tamaño.jpg',
+      isFavorite: false,
     },
     {
       id: 31,
       title: 'Instalación de páneles de separación',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/cN7fbXJ/Instalacion-paneles.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/instalacion/Instalacion-paneles.jpg',
+      isFavorite: false,
     },
   ];
-
 }
