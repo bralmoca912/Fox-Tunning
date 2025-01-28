@@ -8,20 +8,21 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [NgClass],
   templateUrl: './p-s-letreros.component.html',
-  styles: ``
+  styles: ``,
 })
 export default class PSLetrerosComponent {
-
   constructor(private itemsService: ItemsSavedService) {
-    this.itemsService.selectedItems$.subscribe(selectedItems => {
-      this.items.forEach(item => {
-        item.isFavorite = selectedItems.some(selectedItem => selectedItem.id === item.id);
+    this.itemsService.selectedItems$.subscribe((selectedItems) => {
+      this.items.forEach((item) => {
+        item.isFavorite = selectedItems.some(
+          (selectedItem) => selectedItem.id === item.id
+        );
       });
     });
   }
 
   addItemToFavorites(item: Item) {
-    item.isFavorite = !item.isFavorite;  // Cambia el estado de favorito
+    item.isFavorite = !item.isFavorite; // Cambia el estado de favorito
     if (item.isFavorite) {
       this.itemsService.addItem(item);
     } else {
@@ -35,49 +36,54 @@ export default class PSLetrerosComponent {
       title: 'Letreros en Lona Cortos',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/kQ6rkLz/Letreros-Lona-cortos.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/letreros/Letreros-lona-cortos.jpg',
+      isFavorite: false,
     },
     {
       id: 2,
       title: 'Letreros en Lona Largos',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/FY6DXKj/Letreros-La-Lore-3.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/letreros/Letreros-lona-largos.jpg',
+      isFavorite: false,
     },
     {
       id: 3,
       title: 'Letreros de Interiores',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/k49fQcL/Letreros-Interiores.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/letreros/Letreros-Interiores.jpg',
+      isFavorite: false,
     },
     {
       id: 4,
       title: 'Letreros de Advertencias',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/X88pTxg/Letreros-Advertencias.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/letreros/Letreros-Advertencias.jpg',
+      isFavorite: false,
     },
     {
       id: 5,
       title: 'Letreros Luminosos',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/9tymnJp/Letreros-luminosos.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/letreros/Letreros-luminosos.jpg',
+      isFavorite: false,
     },
     {
       id: 6,
       title: 'Letreros 3D',
       tamMin: '1m x 1m',
       tamMax: 'infinito',
-      urlImg: 'https://i.ibb.co/HnPSnfY/Letreros-3-D.jpg',
-      isFavorite: false
+      urlImg:
+        'https://lightpink-pheasant-156918.hostingersite.com/img-content/letreros/Letreros-3D.jpg',
+      isFavorite: false,
     },
   ];
-
 }
